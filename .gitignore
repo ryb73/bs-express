@@ -7,3 +7,6 @@
 tests/test.data
 
 .bsb.lock
+
+# persistent-package-linker
+package-links.json
