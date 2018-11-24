@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.3"
+    "reduice": "0.0.1"
   },
   "peerDependencies": {
     "bs-platform": "^4.0.5"
@@ -20,7 +21,8 @@
     "watch-run": "nodemon lib/js/example/",
     "watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "cd tests && ./test.sh"
+    "test": "cd tests && ./test.sh",
+    "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "repository": {
     "type": "git",
