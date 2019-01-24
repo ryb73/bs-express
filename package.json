@@ -4,8 +4,7 @@
   "description": "Express bindings in Reason",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3",
-    "reduice": "0.0.1"
+    "express": "^4.16.3"
   },
   "peerDependencies": {
     "bs-platform": "^4.0.5"

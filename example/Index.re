@@ -1,4 +1,6 @@
+module BsJson = Json;
 open Express;
+module Json = BsJson;
 
 /* The tests below relies upon the ability to store in the Request
       objects abritrary JSON properties.

@@ -365,6 +365,8 @@ module Response = {
   [@bs.send.pipe: t] external redirect : string => complete = "redirect";
   [@bs.send.pipe: t] external setHeader : (string, string) => t = "set";
   [@bs.send.pipe: t] external setLinks : Js.Dict.t(string) => t = "links";
+
+  [@bs.send.pipe: t] external end_ : complete = "end";
 };
 
 module Next: {
@@ -717,4 +719,11 @@ module Static = {
   /*** [make directory] creates a static middleware for [directory] */
   external asMiddleware : t => Middleware.t = "%identity";
   /*** [asMiddleware static] casts [static] to a Middleware type */
+};
+
+module Json = {
+  type options;
+  [@bs.obj] external options : unit => options = "";
+  [@bs.module "express"] external _make : options => Middleware.t = "json";
+  let make = () => _make(options());
 };

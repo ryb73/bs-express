@@ -1,6 +1,5 @@
 {
   "name": "bs-express",
-  "bs-dependencies": ["reduice"],
   "bsc-flags": [
     "-bs-super-errors"
   ],
