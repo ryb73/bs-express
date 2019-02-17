@@ -45,5 +45,8 @@
   "rebel": {},
   "husky": {
     "hooks": {}
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
